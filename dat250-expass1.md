@@ -18,7 +18,7 @@ I did not encounter any technical problems while setting up my environment. I ha
 Typical problems that I have encountered before is often related to java home not being set correctly, IntelliJ or MVN not able to find the project SDK.
 
 
-# validation of setup 
+# Validation of setup 
 
 I validated my setup through different means, i checked that a simple hello world app ran in IntelliJ.
 
