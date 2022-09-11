@@ -14,10 +14,10 @@ public class Person {
     private String name;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "owners")
     private List<Address> addresses = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY)
     private Set<CreditCard> creditCards = new HashSet<>();
     public String getName() {
         return name;

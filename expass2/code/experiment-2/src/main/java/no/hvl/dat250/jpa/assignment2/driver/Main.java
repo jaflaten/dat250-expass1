@@ -5,7 +5,6 @@ import no.hvl.dat250.jpa.assignment2.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.HashSet;
 import java.util.Set;
 
 public class Main {

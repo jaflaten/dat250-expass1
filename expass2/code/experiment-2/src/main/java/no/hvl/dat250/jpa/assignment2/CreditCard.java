@@ -18,9 +18,7 @@ public class CreditCard {
     private Pincode pincode;
 
     @ManyToOne
-    private Person user;
-    @ManyToOne
-    @JoinColumn(name = "owning_bank_id")
+    @JoinColumn(name = "owningbank_id")
     private Bank owningBank;
     public void setPincode(Pincode pincode) {
         this.pincode = pincode;

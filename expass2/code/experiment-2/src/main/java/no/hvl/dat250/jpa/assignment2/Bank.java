@@ -13,7 +13,7 @@ public class Bank {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @OneToMany(mappedBy = "owningBank")
     Set<CreditCard> ownedCards = new HashSet<>();
 
     private String name;
