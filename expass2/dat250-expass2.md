@@ -16,7 +16,7 @@ No issues here. see further down under [Databases](#Databases) to see how i coul
 
 This task required a bit more self studying and getting more familiar with the use of JPA bidirectional association annotations such as @ManyToMany and @OneToMany to be able to  work with it. I was unsure how to recreate a database table given the example in the assignment since i usually have Spring Boot to provide  CrudRepository which i can use to persist and read entities. However using the EntityManager to persist with was simple when i saw an example of how. 
 
-I had an issue the first time I ran the program that said there was an incompatible mapping between Person and CreditCard, this was fairly obvious since i had used mappedBy on the wrong field name, quick fix. 
+I had an issue the first time I ran the program that said there was an incompatible mapping between Person and CreditCard, this was fairly obvious since i had used mappedBy on the wrong field name, quick fix. Also had some trouble getting the right database mappings correctly to match the domain model, but after trial and error + looking at a Baeldung doc I managed to fix it to match the suggested database layout presented on Canvas by Tim Kräuter.
 
 - In the Address.java class ```getNumber()``` i changed the return type to Integer as the test was expecting a Integer, not a String as a number. 
 - In the same class i also changed the return type of getOwners to be a Set<Person> as the test was expecting a set of Person, not a String. 
@@ -35,7 +35,7 @@ The required test for exp 2 is running green as expected.
 Figured out i could view the database tables through opening a shell with the  ```/derby/bin/ij``` file, connecting to my database and issuing queries i 
 was able to view the content of the database. The screenshot provided called *exp 1 DB using shell.PNG*  shows how this is done. 
 
-Another way i found the content of a DB was through IntelliJ with a plguin called "Database Navigator". I used the database tab it provided and connected to the database. From here i could either write queries or simply click on the different tables and query the content from them. 
+Another way i found the content of a DB was through IntelliJ with a plugin called "Database Navigator". I used the database tab it provided and connected to the database. From here i could either write queries or simply click on the different tables and query the content from them. The screenshot of experiment 2 DB layout is provided with the name *full db.png*
 
 Screenshots will be provided in the same directory as this file.
 
