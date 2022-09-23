@@ -1,0 +1,14 @@
+name: Build project
+on: [push]
+jobs:
+  package-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: maven package
+        run: |
+          mvn package -DskipTests -ntp
+      - name: maven test
+        run: |
+          mvn test
